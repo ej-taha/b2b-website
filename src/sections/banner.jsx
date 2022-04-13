@@ -1,12 +1,31 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Box, Heading, Text, Image, Button } from "theme-ui";
-import BannerImg from "assets/banner-thumb.png";
+import BannerImg from "assets/banner-thumb.svg";
 import ShapeLeft from "assets/shape-left.png";
 import ShapeRight from "assets/shape-right.png";
 
 export default function Banner() {
-  return <h1>Banner</h1>;
+  return (
+    <section sx={styles.banner} id="home">
+      <Container sx={styles.banner.container}>
+        <Box sx={styles.banner.contentBox}>
+          <Heading as="h1" variant="heroPrimary">
+            Top Quality Digital Products to Explore
+          </Heading>
+          <Text as="p" variant="heroSecondary">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+            natus quidem a, voluptatibus repudiandae autem! Dolores perferendis
+            ipsum nobis tempore ullam, magnam non neque eaque nulla facere?
+          </Text>
+          <Button variant="primary">Explore</Button>
+        </Box>
+        <Box sx={styles.banner.imageBox}>
+          <Image src={BannerImg} alt="banner" />
+        </Box>
+      </Container>
+    </section>
+  );
 }
 
 const styles = {
